@@ -29,7 +29,12 @@ console.log(data1)
 
 biadd.innerHTML = data1[0].fullname+`<br>`+data1[0].Address;
 var total =0;
-JSON.parse(localStorage.getItem("value")).map(data=>{
+var arr = JSON.parse(localStorage.getItem("value")).filter(item=>{
+    if(item.no!=0){
+        return item;
+    }
+});
+arr.map(data=>{
     data.price= data.price*72.91;
     total += data.price*data.no;
     Iname.innerHTML += `<div id="product-name" class="p-name">${data.name}</div>`;

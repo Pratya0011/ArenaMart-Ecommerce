@@ -72,7 +72,7 @@ span{
   #timer{
     padding-left: 660px;
     font-size:30px;
-    color: red;
+    color: yellow;
  }
   /*Welcome Div*/
 .welcome{
@@ -84,7 +84,7 @@ span{
   /*weather and date display box*/
   .weather{
     position: relative;
-    left: 600px;
+    left: 550px;
     text-align: right;
     width: 200px;
     color: black;
