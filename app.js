@@ -72,10 +72,9 @@ let weather = ()=>{
 var date = document.getElementById("msg1");
 var temp = document.getElementById("msg2");
 var months = ['January','Febuary','March','April','May','June','July','August','September','October','November','December'];
-var city = 'West Bengal';
-var aip = 'b4b2e0f7ca15eafbe4c8c3a160a41f18'
 
-axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${aip}`)
+
+axios.get(`http://api.openweathermap.org/data/2.5/weather?q=West Bengal&appid=b4b2e0f7ca15eafbe4c8c3a160a41f18`)
 .then(res=>{
     var data = res.data;
     console.log(data);
