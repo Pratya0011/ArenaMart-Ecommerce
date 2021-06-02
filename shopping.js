@@ -8,7 +8,7 @@ window.onpopstate = function (){
 window.onload = ()=>{
     showName();
     covid19updates();
-    //firstPage();
+    firstPage();
 }
 //show the name of user in nav bar
 function showName(){
