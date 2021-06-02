@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+main{
+    min-height: 700px;
+}
+/*Welcome Page */
+
+/*Complete nav bar*/
+.nav-bar{
+  background-color: teal;
+  padding-top: 20px;
+}
+/*Logo Name and nav list*/
+.right-menu{
+    text-align: right;
+    color: #f8b195;
+    font-size: 26px;
+    font-weight: bolder;
+    padding: 5px;
+}
+/*Logo and name*/
+.right-menu div{
+    float: left;
+    margin: 5px;
+}
+.right-menu div img{
+    background:none;
+}
+/*nav buttons in the right*/
+ul li{
+    display: inline-block;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 15px;
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+}
+/*menu buttons*/
+#menu a{
+    color:white;
+    text-decoration: none;
+}
+#menu a:hover{
+    color: white;
+} 
+#menu a:active{
+    color: red;
+}
+/*Pointer*/
+span{
+    display: none;
+}
+/*Pointer display*/
+@media only screen and (max-width: 700px) {
+    span{
+        display: block;
+    }
+    ul li{
+        display: block;
+    }
+    ul{
+        display: none;
+    }
+  }
+/*Cart Icon*/
+#cart{
+    font-size: 12px;
+    color: #FACB3C;
+}
+
+
+/*Shopping Cart Heaing*/
+h1{
+    text-align: center;
+    font-family: sans-serif;
+    margin: 10px;
+    color: teal;
+}
+/*Items In Cart Heading*/
+#quantity{
+    width: 55%;
+    margin-left: 30px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+/*Name Quantity Product*/
+.container-1{
+    display: grid;
+    grid-template-columns: 2.2fr 2fr 1fr;
+    background-color:teal;
+    color: white;
+    grid-gap: 1em;
+    width:680px;
+    opacity: 0.8;
+    margin-left: 30px;
+}
+/*Name Quantity Product List*/
+.container-1 div{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+/*Display Items In the Cart*/
+.container{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    margin-left: 30px;
+}
+/*List Of Items*/
+.cart{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 2fr 0fr 0fr 0fr;
+    grid-gap:1em;
+    width: 900px; 
+}
+/*Item Templates*/
+.cart div{
+    text-align: center;
+    margin: 5px;
+    color: black;
+}
+/*Item Template one*/
+#product-name{
+    width: 300px;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-align: left;
+    
+}
+/*Remove Button*/
+#button{
+    width: 75px;
+    height: 35px;
+    color: dodgerblue;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid dodgerblue;
+    cursor: pointer;
+}
+#button:hover{
+    color: white;
+    background-color: dodgerblue;
+    border: 1px solid white;
+}
+.button{
+    color: dodgerblue;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 25px;
+}
+
+/*Display Total Box*/
+.cart-total{
+    background-color: wheat;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+}
+/*Total Heading*/
+.cart-total h1{
+    color: black;
+    margin: 30px;
+}
+/*Total box divisions*/
+.cart-total div{
+    margin: 20px;
+    font-size: 20px;
+}
+/*Payment and Continue Shopping Button*/
+.cart-total button{
+    background-color: white;
+    color: dodgerblue;
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid dodgerblue;
+    cursor: pointer;
+}
+/*Remove all button container*/
+.removeAll{
+    margin-top: 50px;
+    text-align: center;
+    padding-right: 70px;
+}
+/*Remove all button*/
+.removeAll button{
+    background-color: white;
+    color: dodgerblue;
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid dodgerblue;
+    cursor: pointer;
+}
+/*arrow*/
+.arrow-up {
+    position:absolute;
+    top: 65px;
+    left: 1230px;
+    display: none;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgb(241, 238, 238);
+  }
+/*Account Options block*/
+.list{
+    position: absolute;
+    top: 75px;
+    left: 1140px;
+    display: none;
+    flex-direction: column;
+    background-color: rgb(241, 238, 238);
+    width: 400px;
+}
+/*Acc options list*/
+.list ul li{
+    display: block;
+    color: black;
+    font-family: sans-serif;
+    margin: 5px;
+    padding: 3px;
+}
+.list ul li:hover{
+    background-color: lightblue;
+}
+/*a tag*/
+.list a{
+    color: black;
+    text-decoration: none;
+}
+
+
+/*Address Whole Page*/
+.address{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(43, 42, 42, 0.7);
+    opacity: 0.9;
+    display: none;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+/*Address box*/
+.address .address-box{
+    position: relative;
+    background-color: white;
+    height: 350px;
+    opacity: 1;
+    width: 500px;
+    text-align: center;
+    padding: 40px;
+    box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+    border-radius: 10px;
+}
+/*Heading*/
+.address-box h2{
+    color: teal;
+}
+/*input  boxes container*/
+.address-box p{
+    margin: 10px;
+    color: teal;
+}
+/*input boxes*/
+.address-box input{
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+}
+/*TEXT AREA*/
+.address-box textarea{
+    margin: 5px;
+    border-radius: 5px;
+    width: 250px;
+    border: none;
+}
+/*SUBMIT BUTTON*/
+.address-box button{
+    background-color: white;
+     width: 100px;
+     height: 30px;
+     color: dodgerblue;
+     opacity: 1;
+     border-radius: 33px;
+     border:1px solid teal;
+     margin-top: 20px;
+ }
+.address-box button:hover{
+    background-color: dodgerblue;
+    color: white;
+}
+/*Cross*/
+.close{
+    position: absolute;
+    top: 0;
+    right: 8px;
+    font-size: 30px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+/*Footer grid*/
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 10px;
+}
+/*Footer List*/
+footer ul li{
+    font-size: 10px;
+    color: white;
+}
+/*Footer heading*/
+footer h1{
+    text-align: left;
+    font-size: 20px;
+    color: white;
+}
+
+/*popup box */
+ /*Whole Box*/
+ .bg-model{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.7);
+    position: absolute;
+    display: none;
+    top: 0;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+}
+/*popup part*/
+.model-bg{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+#bg-div{
+    width: 500px;
+    height: 500px;
+}
+/*Heading*/
+.model-bg h2{
+   margin-top: 30px;
+    color: teal;
+    text-align: center;
+}
+/*Form*/
+.layout{
+    margin-top: 30px;
+}
+.layout p{
+   margin: 20px;
+}
+.layout textarea{
+    width: 200px;
+}
+/*Error box*/
+#error{
+   color: red;
+   font-size: 10px;
+}
+#error1{
+    color: red;
+    font-size: 10px;
+ }
+/*Button*/
+.layout button{
+    background-color: white;
+    width: 200px;
+    height: 35px;
+    color: dodgerblue;
+    border: 1px solid dodgerblue;
+    opacity: 1;
+    border-radius: 33px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.layout button:hover{
+   background-color: dodgerblue;
+   color: white;
+}
+
+/*Cross*/
+.cross{
+    position: absolute;
+    top: 0;
+    right: 8px;
+    font-size: 30px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}

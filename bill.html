@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bill.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Invoice</h1>
+        <table border="1px" class="table_1">
+            <tr>
+            <th>Shipping Address</th>
+            <th>Billing Address</th>
+            </tr>
+            <tr>
+            <td id="shipping"></td>
+            <td id="billing"></td>
+            </tr>
+        </table>
+        <table border="1px" class="table_2">
+            <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Amount</th>
+            </tr>
+            <tr>
+                <th id="item_name"></th>
+                <th id="item_quantity"></th>
+                <th id="item_price"></th>
+                <th id="item_amount"></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Total :</th>
+                <th id="item_total"></th>
+            </tr>
+        </table>
+        <div class="footer">
+            <span>Thank You</span>
+            <span><i class="fa fa-heart" style="color: red;"></i></span>
+            <span>ArenaMart</span>
+        </div>
+    </div>
+
+    <script src="bill.js"></script>
+</body>
+</html>

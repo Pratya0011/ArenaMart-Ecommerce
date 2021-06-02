@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="right-menu">
+                <div><img src="images/ArenaMart-logos_white.png" alt="logo" height="35px" width="35px"></div>
+                <div class="name">ArenaMart</div>
+                <span >&#9776;</span>
+                <ul id="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#useful">About</a></li>
+                    <li id="name" onclick="showList()"><i class="fa fa-user" aria-hidden="true" style="font-size: 20px;"></i></li>
+                    <li ><i class="fa fa-shopping-cart"style="font-size:22px;color: #FACB3C;"></i></li>
+                    <li id="cart"></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Shopping Cart</h1>
+        <h2 id="quantity">Items In Cart</h2><br>
+        <div class="container-1">
+                <div>Name</div>
+                <div>Quantity</div>
+                <div>Amount</div>
+            </div>
+            <div class="container">
+                <div class="cart" id="details">
+            </div>
+            <div class="cart-total">
+                <h1>Total</h1>
+                <div id="total">0.00</div>
+                <div><button onclick="continueShopping()">Continue Shopping</button></div>
+                <div><button onclick="popup2()">Proceed to Payment</button></div>
+            </div>
+        </div>
+        <div class="removeAll"><button onclick="removeAll()">Remove All</button></div>
+        
+        <div class="arrow-up"></div>
+        <div class="list">
+            <ul>
+                <li onclick="popup1()">Change Address</li>
+                <li onclick="popup()">Change Password</li>
+                <li onclick="deleteAcc()">Delete Account</li>
+                <li><a href="index.html">Log Out</a></li>
+            </ul>
+        </div>
+        
+        <div class="address">
+            
+
+            <div class="address-box">
+                <div class="close" onclick="popupClose2()">+</div>
+                <h2>Enter Shipping Address</h2>
+                
+                <p>Name:<br><input type="text" placeholder="Enter Name" id="s_name"></p>
+                <p>Full Address:<br><textarea type="text" placeholder="Enter Full Address" id="s_add"></textarea></p>
+                <p>Contact No:<br><input type="number"placeholder="Enter Number" id="s_phn"></p>
+    
+                <p><button onclick="shipping()">Submit</button></p>
+            </div>
+        </div>
+        
+
+        
+        <div class="bg-model" id="abc">
+            <div class="model-bg">
+                <div class="cross" onclick="popupClose()">+</div>
+                <h2>Change Password</h2>
+                <div class="layout">
+    
+                    <p>Username:<br><input type="text" placeholder="Enter Username" id="New-Username"></p>
+                    <p id="error"></p>
+                    <p>New Password:<br><input type="password" placeholder="Enter New Password" id="New-pass"></p>
+                    <p>Confirm Password:<br><input type="password"placeholder="Re-enter Password" id="New-cpassword"></p>
+    
+                    <p><button onclick="changePassword()">Change Password</button></p>
+                </div>
+            </div>
+        </div> 
+<!--Address-->
+        <div class="bg-model" id="add">
+            <div class="model-bg"id ="bg-div">
+                <div class="cross" onclick="popupClose1()">+</div>
+                <h2>Change Address</h2>
+                <div class="layout">
+    
+                    <p>Username:<br><input type="text" placeholder="Enter Username" id="Username"></p>
+                    <p id="error1"></p>
+                    <p>New Address:<br><textarea type="text" placeholder="Enter New Address" id="New-add"></textarea></p>
+                    <p>Confirm Address:<br><textarea type="text"placeholder="Re-enter Address" id="New-cadd"></textarea></p>
+    
+                    <p><button onclick="changeAddress()">Change Address</button></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div style="background-color:black;" class="footer">
+            <div id="useful">
+                <h1>Useful</h1>
+                <ul>
+                    <li>Privacy</li><br>
+                    <li>Terms</li><br>
+                    <li>About</li>
+                </ul>
+            </div>
+            <div id="contact">
+                <h1>Contact Us</h1>
+                <ul>
+                    <li>email-pratya0011@gmail.com</li><br>
+                    <li>Phone-8240428488</li><br>
+                    <li>social media - <a href="https://www.linkedin.com/in/pratya-kumar-tagore-35a149197/">Linkdin</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>

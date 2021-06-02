@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-image: none;">
+    <header>
+        <div class="nav-bar">
+            <div class="right-menu">
+                <div><img src="images/ArenaMart-logos_white.png" alt="logo" height="35px" width="35px"></div>
+                <div class="name">ArenaMart</div>
+                <span onclick="pointer()">&#9776;</span>
+                <ul id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#useful">About</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><i class="fa fa-user" aria-hidden="true" style="font-size: 20px;"></i> Account</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main style="height: 621px;" class="page2-main" >
+        <div class="login">
+            <h2 style="color: teal;">Log In to Continue</h2>
+        
+            <p>Username:<input type="text"placeholder ="Enter Username" id="user"></p>
+            <p>Password:<input type="password"placeholder ="Enter Password" id="pass"></p>
+
+            <p><button onclick="login()">Log In</button></p>
+            <p class="F-pass"><a onclick="popup()">Forgot Password?</a></p>
+            <p class="flip">Dont have an account ? <a href="#" onclick="flip()">Sign In</a></p>
+
+        </div>
+
+        <div class="signin">
+            <h2 style="color: teal;">Don't have an account?.. Sign In</h2>
+
+            <p>Name:<br><input type="text"placeholder ="Enter Name" id="name"></p>
+            <p>Address:<br><textarea type="text"placeholder ="Enter Address" id="address"></textarea></p>
+            <p>Username:<br><input type="text"placeholder ="Enter Username" id="username"></p>
+            <p>Password:<br><input type="password"placeholder ="Enter Password" id="password"></p>
+            <p>Confirm Password<br><input type="password"placeholder ="Re-enter Password" id="cpassword"></p>
+
+            <p><button onclick="Signup()">Sign Up</button></p>
+            <p>Back to <a href="signin.html">Log In</a></p>
+
+        </div>
+    </main>
+<!--popup-->
+    <div class="big-model" id="abc">
+        <div class="model-content">
+            <div class="close" onclick="popupClose()">+</div>
+            <h2>Change Password</h2>
+            <div class="form">
+
+                <p>Username:<br><input type="text" placeholder="Enter Username" id="New-Username"></p>
+                <p id="error"></p>
+                <p>New Passord:<br><input type="password" placeholder="Enter New Password" id="New-pass"></p>
+                <p>Confirm Password:<br><input type="password"placeholder="Re-enter Password" id="New-cpassword"></p>
+
+                <p><button onclick="changePassword()">Change Password</button></p>
+            </div>
+        </div>
+    </div> 
+
+    <footer>
+        <div style="background-color:black;" class="footer">
+            <div id="useful">
+                <h1>Useful</h1>
+                <ul>
+                    <li>Privacy</li><br>
+                    <li>Terms</li><br>
+                    <li>About</li>
+                </ul>
+            </div>
+            <div id="contact">
+                <h1>Contact Us</h1>
+                <ul>
+                    <li>email-pratya0011@gmail.com</li><br>
+                    <li>Phone-8240428488</li><br>
+                    <li>social media - <a href="https://www.linkedin.com/in/pratya-kumar-tagore-35a149197/">Linkdin</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>   
+<script src="signin.js"></script>
+</body>
+</html>

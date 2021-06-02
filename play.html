@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArenaPlay</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="play.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="right-menu">
+                <div><img src="images/ArenaPlay-logos_black.png" alt="logo" height="35px" width="35px"></div>
+                <div class="name">ArenaPlay</div>
+                <div><input type="text" placeholder="Search for Movies" id="moviename" onchange="searchBar()"></div>
+                <span onclick="pointer()">&#9776;</span>
+                <ul id="menu">  
+                    <select name="Genre" id="genreList" onclick="getGenere()">
+                        <option value="genre">Genre</option>
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="animation">Animation</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="crime">Crime</option>
+                        <option value="documentary">Documentary</option>
+                        <option value="drama">Drama</option>
+                        <option value="family">Family</option>
+                        <option value="fantacy">Fantacy</option>
+                        <option value="history">History</option>
+                        <option value="horror">Horror</option>
+                        <option value="music">Music</option>
+                        <option value="mistery">Mistery</option>
+                        <option value="romance">Romance</option>
+                        <option value="science-friction">Science-Friction</option>
+                        <option value="tv-movie">TV Movie</option>
+                        <option value="thriller">Thriller</option>
+                        <option value="war">War</option>
+                        <option value="western">Western</option>
+                        
+                    </select>
+                    <li onclick="topRated()">Home</li>
+                    <li onclick="showPopular()">Popular</li>
+                    <li onclick="showUpcomming()">Upcomming</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="covid-Play">
+            <div>COVID19 INDIA Updates</div>
+        <div id="covid-Play1"></div>
+        </div>
+        <h2 id="heading"></h2>
+        <div id="message"></div>
+        
+    </main>
+    <footer>
+        <div style="background-color:black;" class="footer">
+            <div id="useful">
+                <h1>Useful</h1>
+                <ul>
+                    <li>Privacy</li><br>
+                    <li>Terms</li><br>
+                    <li>About</li>
+                </ul>
+            </div>
+            <div id="contact">
+                <h1>Contact Us</h1>
+                <ul>
+                    <li>email-pratya0011@gmail.com</li><br>
+                    <li>Phone-8240428488</li><br>
+                    <li>social media - <a href="https://www.linkedin.com/in/pratya-kumar-tagore-35a149197/">Linkdin</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>   
+    <script src="play.js"></script>
+</body>
+</html>

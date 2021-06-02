@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+/*Table container main*/
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 100px;
+}
+/*Heading*/
+h1{
+    margin: 20px;
+    color: teal;
+}
+/*address table*/
+.table_1{
+    width: 1000px;
+    min-height: 150px;
+}
+/*Items table*/
+.table_2{
+    width: 1000px;
+    min-height: 150px;
+}
+/*Nmae box*/
+#item_name{
+    text-align: left;
+    font-weight:normal ;
+}
+/*total box*/
+#item_total{
+    font-weight:bolder;
+}

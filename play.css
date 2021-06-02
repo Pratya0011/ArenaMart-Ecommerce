@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+body{
+    background-color: gray;
+}
+
+/*Welcome Page */
+/*Complete nav bar*/
+.nav-bar{
+  background-color: white;
+  height: 50px;
+  padding-top: 20px;
+}
+
+/*Logo Name and nav list*/
+.right-menu{
+    text-align: right;
+    color: black;
+    font-size: 23px;
+    font-weight: bolder;
+    cursor: pointer;   
+}
+/*Logo and name*/
+.right-menu div{
+    float: left;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+/*nav buttons in the right*/
+ul li{
+    display: inline-block;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 18px;
+    color: black;
+    margin: 5px;
+}
+/*menu buttons*/
+#menu a{
+    color:black
+}
+#menu a:hover{
+    color: darkblue;
+} 
+#menu a:active{
+    color: black;
+}
+/*Pointer*/
+span{
+    display: none;
+}
+/*Pointer display*/
+@media only screen and (max-width: 700px) {
+    span{
+        display: block;
+    }
+    ul li{
+        display: block;
+    }
+    ul{
+        display: none;
+    }
+  }
+  /*Genre List*/
+  #genreList{
+    font-size: 15px;
+    color: teal;
+    background-color: lightgray;
+    font-weight: bold;
+    text-align: center;
+}
+/*Covid19 Updates*/
+#covid-Play{
+    margin-top: 10px;
+   background-color: lightgray;
+   text-align: center;
+   margin: 10px;
+   color: dodgerblue;
+}
+
+/*Display the movies in page*/
+#message{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    margin-bottom: 40px; 
+}
+h2{
+    position: absolute;
+}
+/*display the heading of genre*/
+#heading{
+    margin: 20px;
+    color: darkred;
+}
+/*Individual templates*/
+.grid{
+    position: relative; 
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20%;
+    margin-left:5% ;
+    padding: 5%;
+    text-align: left;
+    width: 60%;
+}
+/*child one*/
+.grid .strength{
+    font-size: 23px;
+    margin: 10px;
+}
+/*child two*/
+.grid .strength2{
+    font-size: 10px;
+    color: grey;
+    margin-bottom: 30px;
+}
+/*child three*/
+.grid .strength3{
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr;
+    font-size:10px;
+    margin:5px;
+}
+/*Search bar template two*/
+.grid1{
+    position: relative;
+    background-color: white;
+    border-radius: 2px;
+    margin-top: 15.5%;
+    margin-left:8% ;
+    padding-top: 25%;
+    padding-right: 15px;
+    text-align: left;
+    width: 500px;
+    color: black;
+}
+.grid1 a{
+    color:black;
+}
+.grid1 a:active{
+    color: red;
+}
+/*Footer grid*/
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 10px;
+}
+/*Footer List*/
+footer ul li{
+    font-size: 10px;
+    color: white;
+}
+/*Footer heading*/
+footer h1{
+    font-size: 20px;
+    color: white;
+}

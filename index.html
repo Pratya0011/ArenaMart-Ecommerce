@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8ba">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArenaMart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+</head>
+<body>
+    <header>
+    <div class="nav-bar">
+        <div class="right-menu">
+            <div><img src="images/ArenaMart-logos_white.png" alt="logo" height="35px" width="35px"></div>
+            <div class="name">ArenaMart</div>
+            <span onclick="pointer()">&#9776;</span>
+            <ul id="menu">
+                <li><a href="play.html" target="_blank"style="color: red;"><i class="fa fa-play" style="margin-right: 5px;color: red;"></i>A-play</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#useful">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="signin.html" target="_blank"><i class="fa fa-user" aria-hidden="true" style="font-size: 20px;"></i> Account</a></li>
+            </ul>
+        </div>
+    </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div>
+                <p id="timer"><p>
+                <marquee direction="right" style="font-size: 30px;color:yellow;font-weight: bolder;">Hurry Up</marquee>
+                <marquee  style="font-size: 50px;color:yellow;font-weight: bolder;">Sale Is On</marquee>
+            </div>
+            <div class="welcome">Welcome</div>
+            <div class="weather">
+                <div id="msg1"></div>
+                <div id="msg2"></div>
+            </div>
+            <div style="text-align: center;margin: 50px;margin-bottom: 200px;"><button><a href="signin.html" target="_blank">Shop Now</a></button></div>
+        </div>
+    </main>
+
+    <footer>
+        <div style="background-color:black;" class="footer">
+            <div id="useful">
+                <h1>Useful</h1>
+                <ul>
+                    <li>Privacy</li><br>
+                    <li>Terms</li><br>
+                    <li>About</li>
+                </ul>
+            </div>
+            <div id="contact">
+                <h1>Contact Us</h1>
+                <ul>
+                    <li>email-pratya0011@gmail.com</li><br>
+                    <li>Phone-8240428488</li><br>
+                    <li>social media - <a href="https://www.linkedin.com/in/pratya-kumar-tagore-35a149197/">Linkdin</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>   
+    <script src="app.js"></script>
+</body>
+</html>

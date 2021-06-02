@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+body{
+    background-image: url('/images/cover.jpg');
+    background-size: cover;
+}
+
+/*Welcome Page */
+
+/*Complete nav bar*/
+.nav-bar{
+  background-color: teal;
+  padding-top: 20px;
+}
+/*Logo Name and nav list*/
+.right-menu{
+    text-align: right;
+    color: #f8b195;
+    font-size: 26px;
+    font-weight: bolder;
+    padding: 5px;
+}
+/*Logo and name*/
+.right-menu div{
+    float: left;
+    margin: 5px;
+}
+/*nav buttons in the right*/
+ul li{
+    display: inline-block;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 15px;
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+}
+/*menu buttons*/
+#menu a{
+    color:white;
+    text-decoration: none;
+}
+#menu a:hover{
+    color: white;
+} 
+#menu a:active{
+    color: red;
+}
+/*Pointer*/
+span{
+    display: none;
+}
+/*Pointer display*/
+@media only screen and (max-width: 700px) {
+    span{
+        display: block;
+    }
+    ul li{
+        display: block;
+    }
+    ul{
+        display: none;
+    }
+  }
+
+  /*Reverse Timer*/
+  #timer{
+    padding-left: 660px;
+    font-size:30px;
+    color: red;
+ }
+  /*Welcome Div*/
+.welcome{
+    text-align: center;
+    font-style: Kelly Slab;
+    font-size: 100px;
+    color: black;
+}
+  /*weather and date display box*/
+  .weather{
+    position: relative;
+    left: 550px;
+    text-align: right;
+    width: 200px;
+    color: black;
+  }
+  /*Date*/
+  #msg1{
+    font-size: 30px;
+    opacity: 0.8;
+  }
+  #msg1:hover{
+    opacity: 1;
+}
+/*Weather*/
+  #msg2{
+      margin-top: 20px;
+      font-size: 60px;
+      opacity: 0.8;
+  }
+  #msg2:hover{
+    opacity: 1;
+}
+/*Shop now button*/
+button{
+     width: 100px;
+     padding: 10px;
+     margin-top: 10px;
+     color: dodgerblue;
+     border: solid 1px dodgerblue;
+     cursor: pointer;
+     border-radius: 33px;
+}
+button:hover{
+    opacity: 1;
+    color: white;
+    background-color: dodgerblue;
+}
+button a{
+    color: black;
+    text-decoration: none;
+}
+button a:hover{
+    color: white;
+}
+  /*Footer grid*/
+  .footer{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-left: 10px;
+  }
+  /*Footer List*/
+  footer ul li{
+      font-size: 10px;
+      color: white;
+  }
+  /*Footer heading*/
+  footer h1{
+      font-size: 20px;
+      color: white;
+  }
+ 
+
+ 
+
+ 
+ /* Sign In Page*/
+
+ /*login page main section*/
+ .page2-main{
+     box-sizing: border-box;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     margin-top: 30px;
+ }
+
+ /*Login Box*/
+ .login{
+     width: 400px;
+     height: 300px;
+     margin: 20px;
+     padding: 15px;
+     text-align: center;
+     border-radius: 10px;
+     box-shadow: 0 0 40px 20px rgba(0,0,0,0.10);
+ }
+ .login:hover{
+     
+     border: 1px solid lightgrey;
+ }
+ /*paragraph tags*/
+ .login p{
+     margin: 30px;
+ }
+ /*forgot Password*/
+ .login .F-pass{
+     font-size: 15px;
+     margin: 0px;
+     color: dodgerblue;
+    cursor: pointer;
+ }
+
+ /*Sign in box*/
+ .signin{
+     position: absolute;
+     left: 450px;
+     display: none;
+     flex-direction: column;
+     width: 400px;
+     height: 450px;
+     margin-left: 50px;
+     padding: 5px;
+     text-align: center;
+     border-radius: 10px;
+     box-shadow: 0 0 40px 20px rgba(0,0,0,0.10);
+ }
+ .signin:hover{
+     border:1px solid lightgrey;
+ }
+ /*last paragraph*/
+ .signin p:last-child{
+     margin-top: 40px;
+ }
+ /*Heading*/
+ .signin h2{
+     margin-bottom: 10px;
+     margin-top: 10px;
+ }
+ .signin textarea{
+     border: 2px solid #eee;
+     width: 200px;
+ }
+ /*All the input boxes*/
+ .page2-main input{
+     border: solid 2px #eee;
+     margin: 5px;
+     height: 30px;
+ }
+ /*ALL THE BUTTONS*/
+ .page2-main button{
+     width: 100px;
+     padding: 10px;
+     margin-top: 5px;
+     color: dodgerblue;
+     background-color: white;
+     border: solid 1px dodgerblue;
+     cursor: pointer;
+     border-radius: 33px;
+     opacity: 1;
+ }
+ .page2-main button:hover{
+     color: white;
+     background-color: dodgerblue;
+ }
+ 
+
+ /*popup box */
+ /*Whole Box*/
+ .big-model{
+     width: 100%;
+     height: 100%;
+     background-color:rgba(0, 0, 0, 0.7);
+     position: absolute;
+     display: none;
+     top: 0;
+     justify-content: center;
+     align-items: center;  
+     text-align: center;
+ }
+ /*popup part*/
+ .model-content{
+     width: 400px;
+     height: 400px;
+     background-color: white;
+     border-radius: 10px;
+     position: relative;
+ }
+ /*Heading*/
+ .model-content h2{
+    margin-top: 30px;
+     color: teal;
+ }
+ /*Form*/
+ .form{
+     margin-top: 50px;
+ }
+ .form p{
+    margin: 10px;
+}
+/*Error box*/
+#error{
+    color: red;
+    font-size: 10px;
+}
+/*Button*/
+ .form button{
+     background-color: white;
+     width: 200px;
+     color: dodgerblue;
+     opacity: 1;
+ }
+.form button:hover{
+    background-color: dodgerblue;
+    color: white;
+}
+
+/*Cross*/
+ .close{
+     position: absolute;
+     top: 0;
+     right: 8px;
+     font-size: 30px;
+     transform: rotate(45deg);
+     cursor: pointer;
+ }
