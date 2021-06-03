@@ -85,7 +85,7 @@ span{
   .weather{
     position: relative;
     left: 600px;
-    text-align: right;
+    text-align: center;
     width: 200px;
     color: black;
   }
