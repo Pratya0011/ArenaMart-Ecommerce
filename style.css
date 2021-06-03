@@ -84,8 +84,8 @@ span{
   /*weather and date display box*/
   .weather{
     position: relative;
-    left: 600px;
-    text-align: center;
+    left: 648px;
+    text-align: right;
     width: 200px;
     color: black;
   }
