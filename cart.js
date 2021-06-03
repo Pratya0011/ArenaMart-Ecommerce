@@ -177,11 +177,19 @@ function popupClose1(){
   function popup(){
     var forgetPass = document.getElementById("abc");
     forgetPass.style.display = 'flex';
+    var list = document.querySelector(".list")
+    var arrow = document.querySelector(".arrow-up")
+    arrow.style.display = 'none';
+      list.style.display = 'none';
   }
   //popup function display
   function popup1(){
     var forgetPass = document.getElementById("add");
     forgetPass.style.display = 'flex';
+    var list = document.querySelector(".list")
+    var arrow = document.querySelector(".arrow-up")
+    arrow.style.display = 'none';
+      list.style.display = 'none';
   }
   
   //Change Password Button
