@@ -80,22 +80,20 @@ function Signup(){
     
     if(JSON.parse(localStorage.getItem("items"))=== null){
         values.push(value);
-        timeRefresh(2000)
         localStorage.setItem("items",JSON.stringify(values));
+        window.location.reload();
     }else{
         var localacc = JSON.parse(localStorage.getItem("items"));
                     localacc.map(data=>{
-                    if(value.UserName == data.UserName){
-                       alert('Account already exists');
-                    }else{
+                    
                         value.id = data.id+1;
                         values.push(data);
-                        timeRefresh(2000)
-                    }
                 });
                 values.push(value)
-                localStorage.setItem("items",JSON.stringify(values));             
+                localStorage.setItem("items",JSON.stringify(values));  
+                window.location.reload();           
     }    
+    alert('Sign Up Successfull');
 }
 timeRefresh=(timeoutPeriod)=>{
     setTimeout("location.reload(true);", timeoutPeriod);

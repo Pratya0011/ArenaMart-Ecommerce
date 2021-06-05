@@ -222,7 +222,8 @@ h1{
     display: none;
     flex-direction: column;
     background-color: rgb(241, 238, 238);
-    width: 400px;
+    width: 240px;
+    border-radius: 5px;
 }
 /*Acc options list*/
 .list ul li{

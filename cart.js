@@ -107,6 +107,13 @@ function showList(){
       list.style.display = 'none';
     }
   }
+  //close acc list
+function closeList(){
+    var list = document.querySelector(".list")
+    var arrow = document.querySelector(".arrow-up")
+    arrow.style.display = 'none';
+      list.style.display = 'none';
+  }
   //Delete acc
 function deleteAcc(){
     var id = JSON.parse(localStorage.getItem("id"))

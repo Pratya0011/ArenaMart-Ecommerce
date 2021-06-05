@@ -20,13 +20,13 @@
                     <li><a href="#useful">About</a></li>
                     <li id="name" onclick="showList()"><i class="fa fa-user" aria-hidden="true" style="font-size: 20px;"></i></li>
                     <li ><i class="fa fa-shopping-cart"style="font-size:22px;color: #FACB3C;"></i></li>
-                    <li id="cart"></li>
+                    <li id="cart">( 0 )</li>
                 </ul>
             </div>
         </div>
     </header>
 
-    <main>
+    <main onclick="closeList()">
         <h1>Shopping Cart</h1>
         <h2 id="quantity">Items In Cart</h2><br>
         <div class="container-1">
@@ -52,7 +52,7 @@
                 <li onclick="popup1()">Change Address</li>
                 <li onclick="popup()">Change Password</li>
                 <li onclick="deleteAcc()">Delete Account</li>
-                <li><a href="index.html">Log Out</a></li>
+                <li><a href="signin.html">Log Out</a></li>
             </ul>
         </div>
         
@@ -106,7 +106,7 @@
         </div>
     </main>
 
-    <footer>
+    <footer onclick="closeList()">
         <div style="background-color:black;" class="footer">
             <div id="useful">
                 <h1>Useful</h1>

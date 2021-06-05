@@ -40,6 +40,7 @@
     width: 75px;
     height: 30px;
     border-radius: 20px;
+    cursor: pointer;
 }
 /*nav buttons in the right*/
 ul li{
@@ -162,7 +163,8 @@ h2{
     display: none;
     flex-direction: column;
     background-color: rgb(241, 238, 238);
-    width: 400px;
+    width: 240px;
+    border-radius: 5px;
 }
 /*Acc options list*/
 .list ul li{
