@@ -1,6 +1,6 @@
 history.pushState(null,null,location.href);
 window.onpopstate = function (){
-  history.go(1);
+    history.go(1);
 };
 
 
@@ -12,23 +12,24 @@ var Iprice = document.getElementById("item_price");
 var Iamt = document.getElementById("item_amount");
 var Itotal = document.getElementById("item_total");
 
-
+//fetching shipping address details
 shadd.innerHTML = localStorage.getItem('Sname') + `<br>`+ localStorage.getItem('Sadd')+`<br>`+localStorage.getItem('Sphn');
 
-var id = JSON.parse(localStorage.getItem("id"))
-console.log(id)
+var id = JSON.parse(localStorage.getItem("id"));
 
 var local = JSON.parse(localStorage.getItem("items"));
 
+//fetching the billing address
 var data1 =local.filter(data=>{
     if(data.id == id){
         return data;
     }
 });
-console.log(data1)
 
 biadd.innerHTML = data1[0].fullname+`<br>`+data1[0].Address;
 var total =0;
+
+//fetching the cart values
 var arr = JSON.parse(localStorage.getItem("value")).filter(item=>{
     if(item.no!=0){
         return item;
@@ -43,3 +44,6 @@ arr.map(data=>{
     Iamt.innerHTML += `<div id="product-name" class="p-name">${(data.price*data.no).toFixed(2)} INR</div>`
     Itotal.innerHTML = total.toFixed(2)+' INR';
 });
+
+//empty cart after payment
+localStorage.removeItem("value")

@@ -258,7 +258,9 @@ function sortByColor(){
 
 //when the page loads
 function firstPage(){
-    var msg = document.getElementById("message")
+    var msg = document.getElementById("message");
+    var one = document.getElementById("sort1").value;
+    var two = document.getElementById("sort2").value;
         
         const options = {
         method: 'GET',

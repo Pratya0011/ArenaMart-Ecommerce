@@ -103,7 +103,7 @@ function searchBar(){
            searched1 = `<div class="grid1">
                          <div>Length: ${data.length}</div><br>
                          <div>Plot: ${data.plot}</div><br>
-                         <div><a href="${data.trailer.link}"target="_blank">Watch Trailer</a></div>
+                         <div><a href="${data.trailer.link}">Watch Trailer</a></div>
                         </div>`            
                         msg.innerHTML= Searched + searched1;
                         query.value = '';
