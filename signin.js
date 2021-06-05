@@ -87,6 +87,7 @@ function Signup(){
         var localacc = JSON.parse(localStorage.getItem("items"));
                   localacc.map(data=>{
                     if(value.UserName == data.UserName){
+                        window.location.reload()
                       return alert('Account exists')
                     }else{
                         value.id = data.id+1;
@@ -98,6 +99,7 @@ function Signup(){
                   localStorage.setItem("items",JSON.stringify(values));
                   window.location.reload();
     }
+    
 }
 
 

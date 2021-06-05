@@ -220,10 +220,10 @@ function popupClose1(){
        return alert("Password donot match");
     }
      //check the username
-     var name = localStorage.getItem("name");
+     var id = localStorage.getItem("id");
      var arr = JSON.parse(localStorage.getItem("items"))
      var arr1 = arr.filter(item=>{
-         if(item.fullname == name){
+         if(item.id == id){
              console.log(item)
              return item;
          }
@@ -269,10 +269,10 @@ function popupClose1(){
        return alert("Address donot match");
     }
      //check the username
-     var name = localStorage.getItem("name");
+     var id = localStorage.getItem("id");
      var arr = JSON.parse(localStorage.getItem("items"))
      var arr1 = arr.filter(item=>{
-         if(item.fullname == name){
+         if(item.id == id){
              console.log(item)
              return item;
          }
