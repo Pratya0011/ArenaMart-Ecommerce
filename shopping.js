@@ -66,15 +66,16 @@ function searchProducts(){
                   price: data.response.docs[i].price,
                   no:1
                 }
-                if(JSON.parse(localStorage.getItem("value"))===null){
+                
+                if(JSON.parse(localStorage.getItem('value'))===null){
                   item.push(items);
-                  localStorage.setItem("value",JSON.stringify(item))
+                  localStorage.setItem('value',JSON.stringify(item))
                   alert("Added to Cart Successfully");
                   window.location.reload()
                 }else{
-                  var localitem = JSON.parse(localStorage.getItem("value"));
+                  var localitem = JSON.parse(localStorage.getItem('value'));
                   localitem.map(data=>{
-                    if(items.id == data.id){
+                    if(items.name == data.name){
                       alert('Item already in cart quantity increased')
                       items.no = data.no +1;
                     }else{
@@ -82,11 +83,11 @@ function searchProducts(){
                     }
                   });
                   item.push(items);
-                  localStorage.setItem("value",JSON.stringify(item))
+                  localStorage.setItem('value',JSON.stringify(item))
                   alert("Added to Cart Successfully");
                   window.location.reload()
                 }
-              })
+              });
       }
         }).catch(function (error) {
           console.error(error);

@@ -1,7 +1,7 @@
 
 window.onload=()=>{
     topRated();
-    covid19updates()
+    covid19updates();
 }
 
 //Menu Bar
@@ -63,14 +63,11 @@ function showPopular(){
                         </div>
                         </div>`
         });
-        msg.innerHTML= Popular;
-        head.innerHTML = '';
-        
     }).catch(err=>{
         console.log(err);
     })
 }
-//search by movie name
+//search details by movie name
 function searchBar(){
     var msg = document.getElementById("message");
     var query = document.getElementById("moviename");
@@ -102,7 +99,7 @@ function searchBar(){
 
            searched1 = `<div class="grid1">
                          <div>Length: ${data.length}</div><br>
-                         <div>Plot: ${data.plot}</div><br>
+                         <div>Plot: ${data.plot}</div><br>-
                          <div><a href="${data.trailer.link}">Watch Trailer</a></div>
                         </div>`            
                         msg.innerHTML= Searched + searched1;
@@ -112,6 +109,38 @@ function searchBar(){
           console.error(error);
       });
 }
+//search with query
+    function searchbar(){
+         var msg = document.getElementById("message");
+         var query = document.getElementById("moviename");
+         var head = document.getElementById("heading");
+
+         axios.get(`https://api.themoviedb.org/3/search/movie?api_key=b43f37eb1d6f107f8b687b89fd5dc583&query=${query.value}`)
+         .then(res=>{
+             var data = res.data
+             console.log(data)
+             var Searched = '<h2></h2>'
+             data.results.forEach(user=>{
+                 if(user.poster_path != null){
+                Searched += `<div class="grid">
+                              <div class = "strength">${user.original_title}</div>
+                              <div class = "strength2">Released:${user.release_date}</div>
+                              <div><img src="https://image.tmdb.org/t/p/original/${user.poster_path}"height="200px"width="200px"></div>
+                              <div class = "strength3"> 
+                              <div><i class="fa fa-eye" style="font-size:20px"></i> ${user.vote_count}</div>
+                              </div>
+                              </div>`
+                 }
+              })
+              msg.innerHTML= Searched;
+              head.innerHTML = '';
+              
+            
+         }).catch(err=>{
+             console.log(err)
+         });
+}
+
 
 //Home page
 function topRated(){
@@ -137,6 +166,35 @@ function topRated(){
     }).catch(err=>{
         console.log(err);
     })
+}
+//sort by language
+function getLanguage(){
+    var msg = document.getElementById("message");
+    var lang = document.getElementById("languagelist").value;
+    axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=b43f37eb1d6f107f8b687b89fd5dc583&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate&with_original_language=${lang}`)
+         .then(res=>{
+             var data = res.data
+             console.log(data)
+             var Searched = '<h2></h2>'
+             data.results.forEach(user=>{
+                 if(lang!='language'){
+                Searched += `<div class="grid">
+                              <div class = "strength">${user.original_title}</div>
+                              <div class = "strength2">Released:${user.release_date}</div>
+                              <div><img src="https://image.tmdb.org/t/p/original/${user.poster_path}"height="200px"width="200px"></div>
+                              <div class = "strength3"> 
+                              <div><i class="fa fa-eye" style="font-size:20px"></i> ${user.vote_count}</div>
+                              </div>
+                              </div>`
+                 }
+              })
+              
+              msg.innerHTML= Searched;
+              
+            
+         }).catch(err=>{
+             console.log(err)
+         });
 }
 //Genre List
 var myobject = {
@@ -180,6 +238,7 @@ function getGenere(){
                                <div><i class="fa fa-eye" style="font-size:20px"></i> ${user.vote_count}</div>
                                </div>
                             </div>`
+                            
             })
             var head = document.getElementById("heading");
             msg.innerHTML= Popular;

@@ -8,7 +8,9 @@
 body{
     background-color: gray;
 }
-
+main{
+    min-height: 700px;
+}
 /*Welcome Page */
 /*Complete nav bar*/
 .nav-bar{
@@ -40,6 +42,13 @@ ul li{
     color: black;
     margin: 5px;
 }
+/* search button */
+.right-menu div button{
+    width: 100px;
+    background-color: white;
+    border: 1px solid teal;
+    border-radius: 5px;
+}
 /*menu buttons*/
 #menu a{
     color:black
@@ -70,9 +79,18 @@ span{
   #genreList{
     font-size: 15px;
     color: teal;
-    background-color: lightgray;
+    border: none;
     font-weight: bold;
     text-align: center;
+}
+/* Language List */
+#languagelist{
+    font-size: 15px;
+    color: teal;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 10px;
 }
 /*Covid19 Updates*/
 #covid-Play{

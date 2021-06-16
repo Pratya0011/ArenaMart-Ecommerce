@@ -14,10 +14,28 @@
         <div class="nav-bar">
             <div class="right-menu">
                 <div><img src="images/ArenaPlay-logos_black.png" alt="logo" height="35px" width="35px"></div>
-                <div class="name">ArenaPlay</div>
-                <div><input type="text" placeholder="Search for Movies" id="moviename" onchange="searchBar()"></div>
+                <div class="name" onclick="topRated()">ArenaPlay</div>
+                <div><input type="text" placeholder="Search for Movies" id="moviename" onchange="searchbar()"></div>
+                <div><button onclick="searchBar()">Search Details</button></div>
                 <span onclick="pointer()">&#9776;</span>
                 <ul id="menu">  
+                    <select name="Language" id="languagelist" onclick="getLanguage()">
+                        <option value="language">Language</option>
+                        <option value="hi">Hindi</option>
+                        <option value="bn">Bengali</option>
+                        <option value="as">Assamese</option>
+                        <option value="gu">Gujrati</option>
+                        <option value="ks">Kashmiri</option>
+                        <option value="kn">Kannada</option>
+                        <option value="ml">Malayalam</option>
+                        <option value="mr">Marathi</option>
+                        <option value="or">Odisha</option>
+                        <option value="pa">Punjabi</option>
+                        <option value="sa">Sanskrit</option>
+                        <option value="ta">Tamil</option>
+                        <option value="te">Telugu</option>
+                        <option value="ur">Urdu</option>
+                    </select>
                     <select name="Genre" id="genreList" onclick="getGenere()">
                         <option value="genre">Genre</option>
                         <option value="action">Action</option>

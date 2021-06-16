@@ -6,7 +6,7 @@
     font-family: 'Noto Sans JP', sans-serif;
 }
 main{
-    min-height: 700px;
+    min-height: 520px;
 }
 /*Welcome Page */
 
@@ -201,6 +201,11 @@ h1{
     border-radius: 20px;
     border: 1px solid dodgerblue;
     cursor: pointer;
+}
+.removeAll button:hover{
+    color: white;
+    background-color: dodgerblue;
+    border: 1px solid white;
 }
 /*arrow*/
 .arrow-up {
