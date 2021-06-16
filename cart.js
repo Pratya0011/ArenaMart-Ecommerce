@@ -33,9 +33,9 @@ if(JSON.parse(localStorage.getItem("value")) === null){
         details.innerHTML += `<div id="product-name" class="p-name">${data.name}</div>
                               <div id="product-price" class="abc">x${data.no}</div> 
                               <div id="product-quantity">₹${(data.price*data.no).toFixed(2)} INR</div>
-                              <div><button class="button" onclick = 'addMore(${data.id})'>+</button></div>
-                              <div><button class="button" onclick = 'deleteMore(${data.id})'>-</button></div>
-                              <div><button id="button" onclick = "deleteItems(${data.id})">Remove</button></div>`   
+                              <div><button class="button" onclick = 'addMore(${data.name})'>+</button></div>
+                              <div><button class="button" onclick = 'deleteMore(${data.name})'>-</button></div>
+                              <div><button id="button" onclick = "deleteItems(${data.name})">Remove</button></div>`   
 
 
                               //display total amount
@@ -47,7 +47,7 @@ if(JSON.parse(localStorage.getItem("value")) === null){
 //remove button
 function deleteItems(id){
     var items = JSON.parse(localStorage.getItem("value"));
-    var newItem = items.filter((item)=>item.id !=id)
+    var newItem = items.filter((item)=>item.name !=id)
     localStorage.setItem("value",JSON.stringify(newItem))
     window.location.reload();
 }
@@ -70,7 +70,7 @@ function addMore(id){
     var values = JSON.parse(localStorage.getItem("value")) ;
     console.log(values)
     values.map(data=>{
-        if(id == data.id){
+        if(id == data.name){
             data.no+=1;
             
         }
@@ -85,7 +85,7 @@ function deleteMore(id){
     var values = JSON.parse(localStorage.getItem("value")) ;
     console.log(values)
     values.map(data=>{
-        if(id == data.id){
+        if(id == data.name){
             data.no<1?data.no = 1:'';
             data.no--;
             }
