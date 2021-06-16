@@ -103,6 +103,8 @@ timeRefresh=(timeoutPeriod)=>{
 function login(){
     var user = document.getElementById("user").value;
     var pass = document.getElementById("pass").value;
+    if(JSON.parse(localStorage.getItem("items"))=== null)
+    alert('Invalid Username Or Password');
 
     var arr=JSON.parse(localStorage.getItem("items")).filter(data=>{
         if(data.UserName == user && data.Password == pass){
