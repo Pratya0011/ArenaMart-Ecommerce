@@ -167,7 +167,7 @@ function covid19updates(){
                 }else{
                   var localitem = JSON.parse(localStorage.getItem("value"));
                   localitem.map(data=>{
-                    if(items.id == data.id){
+                    if(items.name == data.name){
                       alert('Item already in cart quantity increased')
                       items.no = data.no +1;
                     }else{
@@ -237,7 +237,7 @@ function sortByColor(){
                 }else{
                   var localitem = JSON.parse(localStorage.getItem("value"));
                   localitem.map(data=>{
-                    if(items.id == data.id){
+                    if(items.name == data.name){
                       alert('Item already in cart quantity increased')
                       items.no = data.no +1;
                     }else{
@@ -304,7 +304,7 @@ function firstPage(){
                 }else{
                   var localitem = JSON.parse(localStorage.getItem("value"));
                   localitem.map(data=>{
-                    if(items.id == data.id){
+                    if(items.name == data.name){
                       alert('Item already in cart quantity increased');
                       items.no = data.no +1;
                     }else{
