@@ -14,9 +14,9 @@ body{
 
 /*Complete nav bar*/
 .nav-bar{
-  background-color: teal;
-  padding-top: 20px;
-}
+    background-color: teal;
+    padding-top: 20px;
+  }
 /*Logo Name and nav list*/
 .right-menu{
     text-align: right;

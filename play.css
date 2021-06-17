@@ -94,7 +94,7 @@ span{
 }
 /*Covid19 Updates*/
 #covid-Play{
-    margin-top: 10px;
+   margin-top: 10px;
    background-color: lightgray;
    text-align: center;
    margin: 10px;
@@ -105,9 +105,40 @@ span{
 #message{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 1em;
     grid-row-gap: 1em;
+    grid-column-gap: 1em;
     margin-bottom: 40px; 
+}
+/* mobile view */
+@media only screen and (max-width: 700px){
+    #message{
+        display: grid;
+        grid-template-columns: 1fr ;
+        width: 400px;
+        grid-gap: 0px;
+    }
+    .nav-bar{
+        background-color: white;
+        height: 100px;
+        width: 400px;
+        padding-top: 20px;
+      }
+      .right-menu div button{
+        width: 100px;
+        background-color: white;
+        border: 1px solid teal;
+        border-radius: 5px;
+        margin-left: 120px;
+    }
+    #covid-Play{
+        margin-top: 10px;
+        width: 380px;
+        background-color: lightgray;
+        text-align: center;
+        color: dodgerblue;
+        
+     }
+    
 }
 h2{
     position: absolute;

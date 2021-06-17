@@ -14,13 +14,12 @@
         <div class="nav-bar">
             <div class="right-menu">
                 <div><img src="images/ArenaPlay-logos_black.png" alt="logo" height="35px" width="35px"></div>
-                <div class="name" onclick="topRated()">ArenaPlay</div>
+                <div class="name" onclick="trending()">ArenaPlay</div>
                 <div><input type="text" placeholder="Search for Movies" id="moviename" onchange="searchbar()"></div>
                 <div><button onclick="searchBar()">Search Details</button></div>
                 <span onclick="pointer()">&#9776;</span>
                 <ul id="menu">  
                     <select name="Language" id="languagelist" onclick="getLanguage()">
-                        <option value="language">Language</option>
                         <option value="hi">Hindi</option>
                         <option value="bn">Bengali</option>
                         <option value="as">Assamese</option>
@@ -59,7 +58,7 @@
                         <option value="western">Western</option>
                         
                     </select>
-                    <li onclick="topRated()">Home</li>
+                    <li onclick="topRated()">Top Rated</li>
                     <li onclick="showPopular()">Popular</li>
                     <li onclick="showUpcomming()">Upcomming</li>
                 </ul>

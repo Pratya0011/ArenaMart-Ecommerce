@@ -1,7 +1,7 @@
 
 window.onload=()=>{
-    topRated();
     covid19updates();
+    trending()
 }
 
 //Menu Bar
@@ -63,6 +63,8 @@ function showPopular(){
                         </div>
                         </div>`
         });
+        msg.innerHTML= Popular;
+        head.innerHTML='';
     }).catch(err=>{
         console.log(err);
     })
@@ -140,6 +142,31 @@ function searchBar(){
              console.log(err)
          });
 }
+//Home Page
+function trending(){
+    var head = document.getElementById("heading");
+    var msg = document.getElementById("message");
+    axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=b43f37eb1d6f107f8b687b89fd5dc583`)
+    .then(res=>{
+        var data = res.data;
+        console.log(data);
+        var toprated= '<h2></h2>'
+        data.results.forEach(user=>{
+          toprated += `<div class="grid">
+                        <div class = "strength">${user.original_title||user.original_name}</div>
+                        <div class = "strength2">Released:${user.release_date||user.first_air_date}</div>
+                        <div><img src="https://image.tmdb.org/t/p/original/${user.poster_path}"height="200px"width="200px"></div>
+                        <div class = "strength3">    
+                        <div><i class="fa fa-eye" style="font-size:20px"></i> ${user.vote_count}</div>
+                        </div>
+                        </div>`
+        })
+        msg.innerHTML= toprated;
+        head.innerHTML = '';
+    }).catch(err=>{
+        console.log(err.data);
+    })
+}
 
 
 //Home page
@@ -165,7 +192,7 @@ function topRated(){
         head.innerHTML = '';
     }).catch(err=>{
         console.log(err);
-    })
+    });
 }
 //sort by language
 function getLanguage(){
@@ -187,10 +214,10 @@ function getLanguage(){
                               </div>
                               </div>`
                  }
-              })
-              
+              });
+              var head = document.getElementById("heading");
               msg.innerHTML= Searched;
-              
+              head.innerHTML = ''
             
          }).catch(err=>{
              console.log(err)
